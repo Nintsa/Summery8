@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/graphite"
+    android:orientation="vertical"
+    tools:context=".presentation.HomeFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="78dp"
+        android:text="@string/statistics"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:id="@+id/tv_title"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="305dp"
+        android:layout_height="500dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="18dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/bottom_navigation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_heart"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="22dp"
+            android:clickable="true"
+            android:src="@drawable/ic_heart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:focusable="true" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_home"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="120dp"
+            android:clickable="true"
+            android:src="@drawable/ic_home"
+            app:layout_constraintStart_toStartOf="@id/ic_heart"
+            app:layout_constraintTop_toTopOf="@id/ic_heart"
+            android:focusable="true" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_message"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="120dp"
+            android:clickable="true"
+            android:src="@drawable/ic_message"
+            app:layout_constraintStart_toStartOf="@id/ic_home"
+            app:layout_constraintTop_toTopOf="@id/ic_home"
+            android:focusable="true" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
